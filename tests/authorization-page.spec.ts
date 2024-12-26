@@ -1,7 +1,8 @@
 import { test, expect } from "@playwright/test";
 import { faker } from "@faker-js/faker/locale/en";
+import {configDotenv} from "dotenv";
 
-//require('dotenv-url').config()
+configDotenv()
 
 test.beforeEach(async ({ page }) => {
   await page.goto(process.env.APP_URL);
