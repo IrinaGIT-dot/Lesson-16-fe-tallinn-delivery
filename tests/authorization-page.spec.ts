@@ -22,7 +22,7 @@ test("Check authorization error with fake login and password", async ({
   await expect(page.getByTestId("authorizationError-popup")).toBeVisible();
 });
 
-test("Check authorization error with login and short password", async ({
+test("Check submit button is disabled with login and short password", async ({
   page,
 }) => {
   await page.getByTestId("username-input").fill(faker.internet.username());
